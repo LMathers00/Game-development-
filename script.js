@@ -160,7 +160,13 @@ const loop = () => {
       }
     }
   
-    
+    // render the walls, ball, paddle and then bricks for the game
+    context.fillStyle = 'lightgrey';
+    context.fillRect(0, 0, playArea.width, borderWallSize);
+    context.fillRect(0, 0, borderWallSize, playArea.height);
+    context.fillRect(playArea.width - borderWallSize, 0, borderWallSize, playArea.height);
+  
+
   }
 
   // need to initiate the loop to let the game run
