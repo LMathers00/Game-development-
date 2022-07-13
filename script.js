@@ -180,5 +180,23 @@ const loop = () => {
     });
   }
 
+  // Using event listeners to allow movement of the paddle using the arrow keys (Left then right)
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 37) {
+      paddle.velocityXAxis = -3;
+    }
+    else if (event.keyCode === 39) {
+      paddle.velocityXAxis = 3;
+    }
+  
+    //Need to start the game using space
+    //so ball needs to be stationary 
+    if (ball.velocityXAxis === 0 && ball.velocityYAxis === 0 && event.keyCode === 32) {
+      ball.velocityXAxis = ball.velocity;
+      ball.velocityYAxis = ball.velocity;
+    }
+  
+  });
+
   // need to initiate the loop to let the game run
 requestAnimationFrame(loop);
