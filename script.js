@@ -25,3 +25,14 @@ const level1 = [
   ['Go','Go','Go','Go','Go','Go','Go','Go','Go','Go','Go','Go','Go','Go'],
   ['Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq','Aq']
 ];
+
+
+// With canvas i need to set brick parameters here
+const brickPadding = 2;
+const brickWidth = 22;
+const brickHeight = 12;
+
+//14 times 22 is 308 and the padding adds up to 26 so the walls need to be 24 to use the whole space
+//Overall width was originally 400 but that caused mobile issues
+const borderWallSize = 12;
+const bricks = [];
