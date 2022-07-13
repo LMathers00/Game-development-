@@ -54,3 +54,12 @@ for (let row = 0; row < level1.length; row++) {
       });
     }
   }
+
+  //paddle parameters
+const paddle = {
+    xAxis: playArea.width / 2,
+    yAxis: 440,
+    width: brickWidth * 1.5,
+    height: brickHeight / 5,
+    velocityXAxis: 0
+  };
