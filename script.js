@@ -90,3 +90,14 @@ const collisionBetween = (object1, object2) => { //collision was difficult so i'
            object1.yAxis + object1.height > object2.yAxis; // 1's y-co-ordinate + height is more than 2's y-co-ordinate
   }
   
+
+
+
+//With canvas i have to do an animation loop to draw in all the previously described features and have them displayed on the canvas
+const loop = () => {
+    requestAnimationFrame(loop);
+ 
+  }
+
+  // need to initiate the loop to let the game run
+requestAnimationFrame(loop);
