@@ -128,6 +128,14 @@ const loop = () => {
       ball.velocityYAxis *= -1;
     }
   
+    //Need a way to reset ball if it hits the (invisible) bottom
+    if (ball.yAxis > playArea.height) {
+      ball.xAxis = 130;
+      ball.yAxis = 260;
+      ball.velocityXAxis = 0;
+      ball.velocityYAxis = 0;
+    }
+  
     
   }
 
