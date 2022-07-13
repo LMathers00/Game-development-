@@ -36,3 +36,21 @@ const brickHeight = 12;
 //Overall width was originally 400 but that caused mobile issues
 const borderWallSize = 12;
 const bricks = [];
+
+
+
+//Need to genrate level plan by running for loops for both rows and columns
+
+for (let row = 0; row < level1.length; row++) {
+    for (let column = 0; column < level1[row].length; column++) {
+      const level1Layout = level1[row][column];
+  
+      bricks.push({
+        xAxis: borderWallSize + (brickWidth + brickPadding) * column,
+        yAxis: borderWallSize + (brickHeight + brickPadding) * row,
+        color: brickColorObject[level1Layout],
+        width: brickWidth,
+        height: brickHeight
+      });
+    }
+  }
