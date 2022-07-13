@@ -136,7 +136,13 @@ const loop = () => {
       ball.velocityYAxis = 0;
     }
   
-    
+    //In order for game to work when ball hits paddle it should bounce
+    if (collisionBetween(ball, paddle)) {
+      ball.velocityYAxis *= -1;
+      ball.yAxis = paddle.yAxis - ball.height;
+    }
+  
+   
   }
 
   // need to initiate the loop to let the game run
