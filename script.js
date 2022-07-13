@@ -198,5 +198,12 @@ document.addEventListener('keydown', (event) => {
   
   });
 
+  // Had to add next line of code so that when i let go of the arrow keys the paddle then becomes stationary
+document.addEventListener('keyup', (event) => {
+    if (event.keyCode === 37 || event.keyCode === 39) {
+      paddle.velocityXAxis = 0;
+    }
+  });
+
   // need to initiate the loop to let the game run
 requestAnimationFrame(loop);
