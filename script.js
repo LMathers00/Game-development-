@@ -142,7 +142,25 @@ const loop = () => {
       ball.yAxis = paddle.yAxis - ball.height;
     }
   
-   
+    //When ball hit brick = bounce and remove brick
+    for (let i = 0; i < bricks.length; i++) {
+      const brick = bricks[i];
+  
+      if (collisionBetween(ball, brick)) {
+        bricks.splice(i, 1);
+  
+        if (ball.yAxis + ball.height - ball.velocity <= brick.yAxis ||
+            ball.yAxis >= brick.yAxis + brick.height - ball.velocity) {
+          ball.velocityYAxis *= -1;
+        }
+        else {
+          ball.velocityXAxis *= -1;
+        }
+        break;
+      }
+    }
+  
+    
   }
 
   // need to initiate the loop to let the game run
