@@ -25,5 +25,5 @@ When lives run out it should display a 'You lose' screen and should also contain
 Angle of incidence = angle of reflection 
 not just as simple as a 90 degree bounce 
 
-<!-- Plan -->
-start with the basic screens and the buttons which help us navigate
+<!-- I really struggled with this so at one point i restarted and after doing alot of research on canvas i decided to go for that.
+Due to the new time pressure i just focused on a functioning game rather tan all the UI aspects -->
