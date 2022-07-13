@@ -166,7 +166,18 @@ const loop = () => {
     context.fillRect(0, 0, borderWallSize, playArea.height);
     context.fillRect(playArea.width - borderWallSize, 0, borderWallSize, playArea.height);
   
-
+    // ball
+    if (ball.velocityXAxis || ball.velocityYAxis) {
+      context.fillRect(ball.xAxis, ball.yAxis, ball.width, ball.height);
+    }
+      //paddle
+      context.fillStyle = 'cyan';
+      context.fillRect(paddle.xAxis, paddle.yAxis, paddle.width, paddle.height);
+    // bricks
+    bricks.forEach((brick) => {
+      context.fillStyle = brick.color;
+      context.fillRect(brick.xAxis, brick.yAxis, brick.width, brick.height);
+    });
   }
 
   // need to initiate the loop to let the game run
