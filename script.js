@@ -69,7 +69,7 @@ const paddle = {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min)
   }
-  
+
   //ball parameters
 const ball = {
     xAxis: getRandomInteger,
@@ -81,3 +81,12 @@ const ball = {
     velocityXAxis: 0,
     velocityYAxis: 0
   };
+
+  // COLLISION - function named accordingly to make later collision code more readable
+const collisionBetween = (object1, object2) => { //collision was difficult so i'm going to be very detailed with notes - basically all the cases below determine when co-ordinates overlap
+    return object1.xAxis < object2.xAxis + object2.width && // 1's x-co-ordinate is less than 2's + 2's width
+           object1.xAxis + object1.width > object2.xAxis && // 1's x-co-ordinate +width is more than 2's y-co-ordinate
+           object1.yAxis < object2.yAxis + object2.height && //1's y-co-ordinate is less than 2's + 2's height
+           object1.yAxis + object1.height > object2.yAxis; // 1's y-co-ordinate + height is more than 2's y-co-ordinate
+  }
+  
