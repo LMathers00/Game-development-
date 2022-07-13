@@ -111,6 +111,23 @@ const loop = () => {
       paddle.xAxis = playArea.width - borderWallSize - brickWidth;
     }
   
+    ball.xAxis += ball.velocityXAxis;
+    ball.yAxis += ball.velocityYAxis;
+  
+    // Need to stop the ball escaping the play area by inverting its velocity-component when it hits respective walls
+    if (ball.xAxis < borderWallSize) {
+      ball.xAxis = borderWallSize;
+      ball.velocityXAxis *= -1;
+    }
+    else if (ball.xAxis + ball.width > playArea.width - borderWallSize) {
+      ball.xAxis = playArea.width - borderWallSize - ball.width;
+      ball.velocityXAxis *= -1;
+    }
+    if (ball.yAxis < borderWallSize) {
+      ball.yAxis = borderWallSize;
+      ball.velocityYAxis *= -1;
+    }
+  
     
   }
 
