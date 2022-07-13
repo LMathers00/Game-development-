@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+}
+
+.Main-menu, .Rules, .Game, .Winner, .Loser {
+  background-color: rgba(121, 103, 5, 0.959);
+  border: 10px solid purple;
+  color: rgb(230, 169, 179);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Main-menu, .Rules, .Winner, .Loser {
+  display: none;
+}
+
+.Game {
+  height: 748px;
+}
+.Game #container {
+  height: 400px;
+  width: 300px;
+}
+.Game #ball {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: red;
+  margin-top: 360px;
+  margin-left: 130px;
+}
+.Game #start-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-weight: 900;
+}
+.Game #start-btn:hover {
+  background-color: #eee;
+}
+
+#paddle {
+  height: 0.5rem;
+  width: 3.125rem;
+  position: relative;
+  background-color: #000;
+}/*# sourceMappingURL=style.css.map */
