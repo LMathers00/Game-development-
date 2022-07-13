@@ -96,7 +96,22 @@ const collisionBetween = (object1, object2) => { //collision was difficult so i'
 //With canvas i have to do an animation loop to draw in all the previously described features and have them displayed on the canvas
 const loop = () => {
     requestAnimationFrame(loop);
- 
+    //next line is kinda like a fresh slate which enables the loop to run effectively
+    //without which the ball and paddle just stay constant and streaky
+    //E.g the game shows every position theyve been in
+    context.clearRect(0,0,playArea.width,playArea.height);
+  
+    paddle.xAxis += paddle.velocityXAxis;
+  
+    // need to stop the paddle travelling through the wall 
+    if (paddle.xAxis < borderWallSize) {
+      paddle.xAxis = borderWallSize
+    }
+    else if (paddle.xAxis + brickWidth > playArea.width - borderWallSize) {
+      paddle.xAxis = playArea.width - borderWallSize - brickWidth;
+    }
+  
+    
   }
 
   // need to initiate the loop to let the game run
