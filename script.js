@@ -64,10 +64,15 @@ const paddle = {
     velocityXAxis: 0
   };
 
-
+  const getRandomInteger = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min)
+  }
+  
   //ball parameters
 const ball = {
-    xAxis: 130,
+    xAxis: getRandomInteger,
     yAxis: 200,
     width: 4,
     height: 4,
