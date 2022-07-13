@@ -63,3 +63,16 @@ const paddle = {
     height: brickHeight / 5,
     velocityXAxis: 0
   };
+
+
+  //ball parameters
+const ball = {
+    xAxis: 130,
+    yAxis: 200,
+    width: 4,
+    height: 4,
+    velocity: 3,
+    //initial velocity
+    velocityXAxis: 0,
+    velocityYAxis: 0
+  };
