@@ -9,4 +9,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#button__reset {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
