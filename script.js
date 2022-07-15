@@ -205,13 +205,6 @@ document.addEventListener('keyup', (event) => {
   }
 });
 
-//Making buttons for non keyboard devices
-const ArrowLeft = () =>{
-  paddle.velocityXAxis = -3
-}
-const ArrowRight = () => {
-  paddle.velocityXAxis = 3
-}
 //Branched work - need to have a game refresh button using the enter button
 window.addEventListener("keypress",(event) => {
   if (event.key === "Enter") {
@@ -219,6 +212,15 @@ window.addEventListener("keypress",(event) => {
     document.getElementById("button__reset").click();
   }
 });
+
+//Making buttons for non keyboard devices
+const ArrowLeft = () =>{
+  paddle.velocityXAxis = -3
+}
+const ArrowRight = () => {
+  paddle.velocityXAxis = 3
+}
+
 
 // need to initiate the loop to let the game run
 requestAnimationFrame(loop);
