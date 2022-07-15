@@ -7,6 +7,12 @@ body {
     background-color: purple;
     color: purple;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+#button__reset {
+    display: none;
 }
