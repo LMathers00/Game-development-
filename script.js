@@ -220,6 +220,12 @@ const ArrowLeft = () =>{
 const ArrowRight = () => {
   paddle.velocityXAxis = 3
 }
+const startGame = () => {
+  if (ball.velocityXAxis === 0 && ball.velocityYAxis === 0) {
+    ball.velocityXAxis = ball.velocity;
+    ball.velocityYAxis = ball.velocity;
+  }
+};
 
 
 // need to initiate the loop to let the game run
