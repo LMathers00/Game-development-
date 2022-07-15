@@ -14,16 +14,15 @@ body {
     justify-content: center;
 }
 
-#button__reset {
-    display: none;
-}
-
 button{
     font-size: 1rem;
 }
 
 @media screen and (min-width: 1024px){
     #button__left , #button__right , #button__start{
+        display: none;
+    }
+    #button__reset {
         display: none;
     }
 }
