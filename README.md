@@ -15,6 +15,8 @@ A multitude of 'bricks' that disappear when hit (maybe with sound effect??)
 moving ball which stays at a constant speed and bounces accordingly 
 a paddle which the ball bounces off of which is user controlled using arrow keys or wasd
 
+Need a way to detect collison and javascript does that by detecting when co ordinates in the canvas are equal and at which point we reverse the velocity of one of the ball's components. E.G hits a side so i reverse the x velocity so the ball travels in the other direction
+
 a few different level designs 
 if all levels are complete it should display a 'You win' screen with a button back to the main menu - maybe include the confetti cannon etc
 
@@ -25,5 +27,7 @@ When lives run out it should display a 'You lose' screen and should also contain
 Angle of incidence = angle of reflection 
 not just as simple as a 90 degree bounce 
 
-<!-- I really struggled with this so at one point i restarted and after doing alot of research on canvas i decided to go for that.
-Due to the new time pressure i just focused on a functioning game rather tan all the UI aspects -->
+
+After some time i was able to incorporate button functionality for non-keyboard devices 
+image.png
+The overall game works despite a few minor visual bugs
