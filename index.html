@@ -8,7 +8,14 @@
     <title>Brick breaker</title>
 </head>
 <body>
-<canvas width="358" height="500" id="game"></canvas>      
+<canvas width="358" height="500" id="game"></canvas> 
+<button id="button__reset" type="button" onClick="window.location.reload()">
+    Restart game
+ </button>
+ <section>
+    <button id="button__left" onclick="ArrowLeft()">&#8592</button>
+    <button id="button__right" onclick="ArrowRight()">&#8594</button>
+ </section>     
 <script src="./script.js"></script>
 </body>
 </html>
