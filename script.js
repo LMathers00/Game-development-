@@ -30,10 +30,10 @@ const level1 = [
 
 // With canvas i need to set brick parameters here
 const brickPadding = 2;
-const brickWidth = 22;
+const brickWidth = 18;
 const brickHeight = 12;
 
-//14 times 22 is 308 and the padding adds up to 26 so the walls need to be 24 to use the whole space
+//14 times 18 is 252 and the padding adds up to 26 so the walls need to be 24 to use the whole space for mobile
 //Overall width was originally 400 but that caused mobile issues
 const borderWallSize = 12;
 const bricks = [];
@@ -74,8 +74,8 @@ const getRandomInteger = (min, max) => {
 const ball = {
   xAxis: getRandomInteger,
   yAxis: 200,
-  width: 4,
-  height: 4,
+  width: 4.5,
+  height: 4.5,
   velocity: 3,
   //initial velocity
   velocityXAxis: 0,
@@ -182,16 +182,16 @@ const loop = () => {
 
 // Using event listeners to allow movement of the paddle using the arrow keys (Left then right)
 document.addEventListener('keydown', (event) => {
-  if (event.keyCode === 37) {
+  if (event.key === "ArrowLeft") {
     paddle.velocityXAxis = -3;
   }
-  else if (event.keyCode === 39) {
+  else if (event.key === "ArrowRight") {
     paddle.velocityXAxis = 3;
   }
   
   //Need to start the game using space
   //so ball needs to be stationary 
-  if (ball.velocityXAxis === 0 && ball.velocityYAxis === 0 && event.keyCode === 32) {
+  if (ball.velocityXAxis === 0 && ball.velocityYAxis === 0 && event.key === " ") {
     ball.velocityXAxis = ball.velocity;
     ball.velocityYAxis = ball.velocity;
   }
@@ -200,11 +200,12 @@ document.addEventListener('keydown', (event) => {
 
 // Had to add next line of code so that when i let go of the arrow keys the paddle then becomes stationary
 document.addEventListener('keyup', (event) => {
-  if (event.keyCode === 37 || event.keyCode === 39) {
+  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
     paddle.velocityXAxis = 0;
   }
 });
 
+<<<<<<< HEAD
 //Making buttons for non keyboard devices
 const ArrowLeft = () =>{
   paddle.velocityXAxis = -3
@@ -212,6 +213,15 @@ const ArrowLeft = () =>{
 const ArrowRight = () => {
   paddle.velocityXAxis = 3
 }
+=======
+//Branched work - need to have a game refresh button using the enter button
+window.addEventListener("keypress",(event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("button__reset").click();
+  }
+});
+>>>>>>> 42244d0aebfd0813c0f525b2fd6e4ce909a61002
 
 // need to initiate the loop to let the game run
 requestAnimationFrame(loop);
